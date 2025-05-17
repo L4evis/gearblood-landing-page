@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Step-by-step guide for compiling Unreal Engine 5 (UE5) on Linux (Ubuntu). Compatible with Mari, Blender, and other development tools.">
+  <meta name="keywords" content="Unreal Engine 5, UE5, Linux, Ubuntu, compilation, tutorial, game dev, GearBlood">
+  <title>GearBlood – Compiling UE5 on Linux (Ubuntu)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#0f0f0f, #1a1a1a);
+      color: #f1e4d2;
+      font-family: 'Unica One', sans-serif;
+      min-height: 100vh;
+      text-align: center;
+    }
+    nav {
+      width: 100%;
+      background-color: #1a1a1a;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #f1e4d2;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+    }
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .content {
+      max-width: 700px;
+      margin: 3em auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 0 1rem;
+    }
+    h1, h2 {
+      text-align: center;
+      text-shadow: 2px 2px 4px #00000088;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2em;
+    }
+    code, pre {
+      background-color: #2a2a2a;
+      padding: 0.5em;
+      border-radius: 6px;
+      display: block;
+      white-space: pre-wrap;
+    }
+  </style>
+  <script data-goatcounter="https://gearblood.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="gratitude.html">Gratitude</a>
+  <a href="devlog.html">Devlog</a>
+  <a href="gearhead.html">Gearhead's Manual</a>
+</nav>
+
+<main class="content">
+  <h1>Compiling Unreal Engine 5 on Linux (Ubuntu)</h1>
+  <p>This guide has been verified on Ubuntu 24.04. Tested as part of the GearBlood game development process.</p>
+
+  <h2>1. Get the Source Code</h2>
+  <p>First, connect your GitHub account to Epic Games:</p>
+  <code>git clone --depth=1 https://github.com/EpicGames/UnrealEngine.git -b release</code>
+
+  <h2>2. Install Dependencies</h2>
+  <p>Run this in your terminal:</p>
+  <pre><code>sudo apt update && sudo apt install -y \
+  clang mono-devel cmake ninja-build python3 python-is-python3 build-essential \
+  libvulkan-dev libxcb-xinput-dev libgtk-3-dev libxrandr-dev libxinerama-dev \
+  libxi-dev libsdl2-dev libssl-dev libicu-dev libxml2-dev libxcursor-dev \
+  libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev \
+  libxcb-render-util0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev</code></pre>
+
+  <h2>3. Prepare the Project</h2>
+  <pre><code>cd UnrealEngine
+./Setup.sh
+./GenerateProjectFiles.sh</code></pre>
+
+  <h2>4. Compile</h2>
+  <p>Run:</p>
+  <code>make</code>
+  <p>This step takes 30–120 minutes depending on your system. Warnings about plugins can usually be ignored.</p>
+
+  <h2>5. Launch the Editor</h2>
+  <pre><code>cd Engine/Binaries/Linux
+./UnrealEditor</code></pre>
+
+  <h2>6. Notes and Tips</h2>
+  <ul>
+    <li>After OS or driver updates, it's good to re-run <code>make</code>.</li>
+    <li>If the build crashes, reboot to clear memory and swap.</li>
+    <li><code>make</code> can safely be repeated – progress is saved.</li>
+  </ul>
+
+  <h2>7. What to Expect</h2>
+  <ul>
+    <li>Fully working Unreal Editor on Linux</li>
+    <li>Support for C++ and Blueprint projects</li>
+    <li>Compatibility with Mari, Blender, and other Linux-friendly tools</li>
+  </ul>
+</main>
+
+<footer style="text-align: center; padding: 2em 0; font-size: 0.8rem; opacity: 0.5;">
+  <p>This site uses GoatCounter for privacy-friendly analytics.<br>No cookies. No tracking.</p>
+</footer>
+</body>
+</html>
+
