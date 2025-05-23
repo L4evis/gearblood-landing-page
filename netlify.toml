@@ -5,3 +5,21 @@
   from = "/thanks.html"
   to = "/thanks.html"
   status = 200
+
+[[redirects]]
+  from = "http://gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
