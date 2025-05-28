@@ -53,6 +53,10 @@ body {
     max-width: 300px;
     margin-bottom: 1.5em;
   }
+  img.teaser {
+    max-width: 300px;
+    margin-bottom: 1,5em;
+  }
 
   h1 {
     font-size: 4rem;
