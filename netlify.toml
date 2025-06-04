@@ -23,3 +23,23 @@
   to = "https://gearblood.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 301
+
+[[redirects]]
+  from = "/gratitude"
+  to = "/gratitude.html"
+  status = 301
+
+[[redirects]]
+  from = "/gearhead"
+  to = "/gearhead.html"
+  status = 301
+
+[[redirects]]
+  from = "/devlog"
+  to = "/devlog.html"
+  status = 301
