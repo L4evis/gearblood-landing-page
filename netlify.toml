@@ -47,12 +47,10 @@
   to = "/devlog.html"
   status = 301
   force = true
-<<<<<<< HEAD
 
 [[redirects]]
   from = "/gallery"
   to = "/gallery.html"
   status = 301
   force = true
-=======
->>>>>>> 27578960ff6cb9952c52f3e5169fd3f5e40e6d45
+
