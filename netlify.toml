@@ -1,0 +1,55 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/thanks.html"
+  to = "/thanks.html"
+  status = 200
+
+[[redirects]]
+  from = "http://gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.gearblood.com/*"
+  to = "https://gearblood.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gratitude"
+  to = "/gratitude.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gearhead"
+  to = "/gearhead.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/devlog"
+  to = "/devlog.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 301
+  force = true

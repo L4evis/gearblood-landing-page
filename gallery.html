@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GearBlood – Gallery</title>
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="main.css" />
+<link rel="canonical" href="https://gearblood.com/gallery.html">
+<link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+<script async="" data-goatcounter="https://gearblood.goatcounter.com/count" src="//gc.zgo.at/count.js"></script>
+  <style>
+    body {
+      font-family: 'Unica One', sans-serif;
+      background-color: #111;
+      color: #f1e4d2;
+      text-align: center;
+      padding: 2em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      border: 2px solid #444;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid #666;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gratitude.html">Gratitude</a>
+    <a href="devlog.html">Devlog</a>
+    <a href="gearhead.html">Gearhead's Manual</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <h1>Gallery</h1>
+  <p style="opacity: 0.6; margin-bottom: 2em;">Fragments from the garage. WIP renders, textures, and sacred dirt.</p>
+
+  <div class="gallery">
+    <img src="gallery/car_prototype_1.webp" alt="Example Render 1" onclick="openLightbox(this.src)">
+    <img src="gallery/car_prototype_2.webp" alt="Example Render 2" onclick="openLightbox(this.src)">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Zoomed">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+<footer class="footer">
+<p style="font-size: 0.8rem; opacity: 0.5; margin-top: 3em;">
+    This site uses GoatCounter for basic privacy-friendly analytics.<br/>
+    No personal data or cookies are stored.
+  </p>
+</footer>
+</body>
+</html>
+
