@@ -25,32 +25,8 @@
   force = true
 
 [[redirects]]
-from = "/index.html"
-to = "/"
-status = 301
-force = true
-
-[[redirects]]
-  from = "/gratitude"
-  to = "/gratitude.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/gearhead"
-  to = "/gearhead.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/devlog"
-  to = "/devlog.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery.html"
+  from = "/index.html"
+  to = "/"
   status = 301
   force = true
 
