@@ -25,10 +25,10 @@
   force = true
 
 [[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 301
-  force = true
+from = "/index.html"
+to = "/"
+status = 301
+force = true
 
 [[redirects]]
   from = "/gratitude"
