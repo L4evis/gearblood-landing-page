@@ -6,6 +6,7 @@
   to = "/thanks.html"
   status = 200
 
+# --- HTTPS + www přesměrování ---
 [[redirects]]
   from = "http://gearblood.com/*"
   to = "https://gearblood.com/:splat"
@@ -24,9 +25,35 @@
   status = 301
   force = true
 
+# --- INDEX.HTML přesměrování ---
 [[redirects]]
   from = "/index.html"
   to = "/"
   status = 301
   force = true
 
+# --- DEVLOG bez .html přesměrování ---
+[[redirects]]
+  from = "/devlog"
+  to = "/devlog.html"
+  status = 301
+  force = true
+
+# --- Další přesměrování .html pokud máš více stránek ---
+[[redirects]]
+  from = "/gratitude"
+  to = "/gratitude.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gearhead"
+  to = "/gearhead.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery.html"
+  status = 301
+  force = true
